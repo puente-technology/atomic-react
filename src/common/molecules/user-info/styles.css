@@ -1,0 +1,15 @@
+.user-info {
+    display: flex;
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.user-text {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}

@@ -1,1 +1,7 @@
 node_modules
+/.idea/.gitignore
+/.idea/atomic-react.iml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml

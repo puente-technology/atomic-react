@@ -7,7 +7,7 @@ const StyledInput = styled.input`
     border-width: 1px;
 `;
 
-const Input:FunctionComponent<InputProps> = ({ type, className, value, setValue, placeholder}) => {
+const Input:FunctionComponent<InputProps> = ({ setValue, ...props }) => {
 
     const inputChangeHandler = useCallback((event) => {
         console.log('Event : ', event.target.value);
@@ -15,7 +15,7 @@ const Input:FunctionComponent<InputProps> = ({ type, className, value, setValue,
     },[setValue])
 
     return (
-        <StyledInput type={type} value={value} onChange={inputChangeHandler} placeholder={placeholder || ''} />
+        <StyledInput {...props} onChange={inputChangeHandler} />
     )
 }
 

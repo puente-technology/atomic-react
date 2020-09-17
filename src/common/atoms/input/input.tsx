@@ -8,9 +8,7 @@ const StyledInput = styled.input`
 `;
 
 const Input:FunctionComponent<InputProps> = ({ setValue, ...props }) => {
-
     const inputChangeHandler = useCallback((event) => {
-        console.log('Event : ', event.target.value);
         setValue(event.target.value);
     },[setValue])
 

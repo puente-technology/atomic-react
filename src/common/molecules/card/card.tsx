@@ -24,13 +24,18 @@ const CardImage = styled(Image)`
     margin: 0px;
 `;
 
+const Description = styled.p`
+    text-align: center;
+    font-size: 12px;
+`;
+
 
 const Card:FunctionComponent<CardProps> = ({ source, header, description }) => {
     return (
         <CardContainer>
             <CardImage source={source} alt="" textSize="image"/>
             <h4>{header || "Lorem Ipsum"}</h4>
-            <p className="description">{description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit"}</p>
+            <Description>{description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit"}</Description>
         </CardContainer>
     )
 }

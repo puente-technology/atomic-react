@@ -17,7 +17,6 @@ const StyledButton = styled.button`
 `;
 
 const Button:FunctionComponent<ButtonProps> = ({ onClick, text, className }) => {
-    console.log('Class Name : ', className);
     return (
         <StyledButton className={className} onClick={onClick}>{text}</StyledButton>
     )

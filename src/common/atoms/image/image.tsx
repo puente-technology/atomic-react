@@ -15,7 +15,7 @@ const ImageContainer = styled.div`
 const Image:FunctionComponent<ImageProps> = ({ className, source, alt, textSize}) => {
 
     return (
-        <ImageContainer>
+        <ImageContainer className={className}>
             {source ? (
                  <img src={"data:,"} alt=""></img>
             ): <p>{textSize}</p>}

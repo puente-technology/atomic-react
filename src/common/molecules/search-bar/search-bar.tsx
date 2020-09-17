@@ -1,32 +1,44 @@
 import React, { FunctionComponent } from "react";
-import './styles.css';
 import Input from "../../atoms/input";
 import styled from "styled-components";
 
 const SearchInput = styled(Input)`
-   &&& { 
      border: none ;
      flex: 1;
      padding-right: 10px;
      outline: none;
-   }
+`;
+
+const SideContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const SearchBarContainer = styled.div`
+    margin: 10px;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    border: 1px;
+    border-style: solid;
 `;
 
 const SearchBar:FunctionComponent<SearchBarProps> = ({ value, setValue, left, right }) => {
     return (
-        <div className="search-bar">
+        <SearchBarContainer>
             <SearchInput type="text" value={value} setValue={setValue} placeholder="Search" />
             {left && (
-                <div>
-                    {left}
-                </div>
+                <SideContainer>
+                    {left()}
+                </SideContainer>
             )}
             {right && (
-                <div className="right-container">
-                    {right("inline-element-right")}
-                </div>
+                <SideContainer>
+                    {right()}
+                </SideContainer>
             )}
-        </div>
+        </SearchBarContainer>
     )
 }
 

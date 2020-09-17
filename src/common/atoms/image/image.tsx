@@ -1,16 +1,26 @@
 import React, { FunctionComponent } from "react";
-import classNames from 'classnames';
-import './styles.css';
+import styled from "styled-components";
 
-const Avatar:FunctionComponent<ImageProps> = ({ className, source, alt, textSize}) => {
+const ImageContainer = styled.div`
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+`;
+
+const Image:FunctionComponent<ImageProps> = ({ className, source, alt, textSize}) => {
 
     return (
-        <div className={classNames(className,"image")}>
+        <ImageContainer>
             {source ? (
                  <img src={"data:,"} alt=""></img>
             ): <p>{textSize}</p>}
-        </div>
+        </ImageContainer>
     )
 }
 
-export default Avatar;
+export default Image;

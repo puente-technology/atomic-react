@@ -1,11 +1,25 @@
 import React, { FunctionComponent } from "react";
-import './styles.css';
-import classNames from 'classnames';
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+    display: inline-block;
+    border-radius: 10px;
+    padding: 12px 32px;
+    margin: 5px;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    border-width: 0;
+    cursor: pointer;
+    text-align: center;
+`;
 
 const Button:FunctionComponent<ButtonProps> = ({ onClick, text, className }) => {
     console.log('Class Name : ', className);
     return (
-        <button className={classNames("button", className)} onClick={onClick}>{text}</button>
+        <StyledButton className={className} onClick={onClick}>{text}</StyledButton>
     )
 }
 

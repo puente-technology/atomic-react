@@ -1,6 +1,11 @@
 import React, { FunctionComponent, useCallback } from "react";
-import classNames from 'classnames';
-import './styles.css';
+import styled from "styled-components";
+
+const StyledInput = styled.input`
+    padding: 10px 5px;
+    border-radius: 10px;
+    border-width: 1px;
+`;
 
 const Input:FunctionComponent<InputProps> = ({ type, className, value, setValue, placeholder}) => {
 
@@ -10,7 +15,7 @@ const Input:FunctionComponent<InputProps> = ({ type, className, value, setValue,
     },[setValue])
 
     return (
-        <input className={classNames(className, "input")} type={type} value={value} onChange={inputChangeHandler} placeholder={placeholder || ''}></input>
+        <StyledInput type={type} value={value} onChange={inputChangeHandler} placeholder={placeholder || ''} />
     )
 }
 
